@@ -26,9 +26,21 @@ const setColors = event => {
   console.log(store.colors)
 }
 
+const play = event => {
+  $('.btn').toggleClass('hidden')
+  // const colors = store.colors
+  console.log(store)
+}
+
+const stop = event => {
+  $('.btn').toggleClass('hidden')
+}
+
 const addHandlers = () => {
   $('#colors').on('change', setColors)
   createDisplay()
+  $('#play').on('click', play)
+  $('#stop').on('click', stop)
 }
 
 module.exports = {

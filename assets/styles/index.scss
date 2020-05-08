@@ -1,7 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
+  background-image: url('./public/wooden-background.jpg');
+  color: gold;
+  font-family: cursive;
   text-align: center;
+}
+
+h1 {
+  margin-top: 2vh;
 }
 
 .display {
