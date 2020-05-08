@@ -32,13 +32,15 @@ const play = event => {
     setTimeout(() => { $('#usr-msg').text('') }, 2000)
     return
   }
-  $('.btn').toggleClass('hidden')
-  // const colors = store.colors
-  console.log(store)
+  $('.btn').toggleClass('hidden') // hides play btn & shows stop btn
+  const num = store.colors.length
+  console.log(num)
 }
 
 const stop = event => {
-  $('.btn').toggleClass('hidden')
+  $('.btn').toggleClass('hidden') // hides stop btn & shows play btn
+  $('input').prop('checked', false)
+  store.colors = null
 }
 
 const addHandlers = () => {
