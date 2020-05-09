@@ -22,9 +22,11 @@ const createDisplay = () => {
   $('#display').html(displayHtml) // fills display container w/the lights' html
 }
 
-const setColors = event => {
+const setColorScheme = event => {
   store.colors = helpers.colors[event.target.value]
 }
+
+let colorInterval
 
 const play = event => {
   if (!store.colors) {
@@ -33,18 +35,19 @@ const play = event => {
     return
   }
   $('.btn').toggleClass('hidden') // hides play btn & shows stop btn
-  const num = store.colors.length
-  console.log(num)
+  colorInterval = setInterval(helpers.setColors, 500)
 }
 
 const stop = event => {
   $('.btn').toggleClass('hidden') // hides stop btn & shows play btn
   $('input').prop('checked', false)
   store.colors = null
+  clearInterval(colorInterval)
+  createDisplay()
 }
 
 const addHandlers = () => {
-  $('#colors').on('change', setColors)
+  $('#colors').on('change', setColorScheme)
   createDisplay()
   $('#play').on('click', play)
   $('#stop').on('click', stop)

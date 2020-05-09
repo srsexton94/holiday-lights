@@ -1,7 +1,11 @@
 {{#each rows as |row|}}
   <div class="row">
     {{#each this}}
-      <div class="light col-{{1}}"></div>
+      {{#if this}}
+        <div class="light col-{{1}}" style="background-color:{{this}};"></div>
+      {{else}}
+        <div class="light col-{{1}}"></div>
+      {{/if}}
     {{/each}}
   </div>
 {{/each}}
