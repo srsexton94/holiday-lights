@@ -1,5 +1,9 @@
 
 # Holiday Twinkle Lights
+
+![](public/screenshot.png)
+
+## Project Description
 This project is designed as a "twinkle lights" UI, where the user can select a mid-winter holiday of their choice (or Rainbow!) and start/stop a holiday "twinkle light" display.
 Inspired/modified from [Florinpop17 / App Ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Christmas-Lights-App.md)
 
